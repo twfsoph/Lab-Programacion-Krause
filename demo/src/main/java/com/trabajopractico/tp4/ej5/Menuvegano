@@ -1,0 +1,3 @@
+public class Menuvegano extends Menu {
+    private double proteinavegetal;
+}
