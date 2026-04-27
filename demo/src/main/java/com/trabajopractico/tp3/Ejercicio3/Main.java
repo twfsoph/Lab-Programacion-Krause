@@ -1,5 +1,7 @@
 package main.java.com.trabajopractico.tp3.Ejercicio3;
 
+
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,26 +11,34 @@ public class Main {
         Veterinario chu = new Veterinario("barbie");
         Veterinario tri = new Veterinario("moana");
 
-        uan.animales[0] = comun;
-        uan.animales[1] = new Animal("kira");
-        uan.animales[2] = new Animal("milo");
+        uan.agregarAnimal(comun);
+        uan.agregarAnimal(new Animal("kira"));
+        uan.agregarAnimal(new Animal("milo"));
 
-        chu.animales[0] = comun;
-        chu.animales[1] = new Animal("harry");
-        chu.animales[2] = new Animal("ozzie");
+        chu.agregarAnimal(comun);
+        chu.agregarAnimal(new Animal("harry"));
+        chu.agregarAnimal(new Animal("ozzie"));
 
-        tri.animales[0] = comun;
-        tri.animales[1] = new Animal("cuasimodo");
-        tri.animales[2] = new Animal("flander");
+        tri.agregarAnimal(comun);
+        tri.agregarAnimal(new Animal("cuasimodo"));
+        tri.agregarAnimal(new Animal("flander"));
     }
 }
 
+import java.util.ArrayList;
+import java.util.List;
+
 class Veterinario {
     String nombre;
-    Animal[] animales = new Animal[3];
+    List<Animal> animales;
 
     public Veterinario(String nombre) {
         this.nombre = nombre;
+        this.animales = new ArrayList<>();
+    }
+
+    public void agregarAnimal(Animal a) {
+        animales.add(a);
     }
 }
 
