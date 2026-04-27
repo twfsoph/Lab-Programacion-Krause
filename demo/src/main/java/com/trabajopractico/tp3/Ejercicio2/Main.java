@@ -1,64 +1,53 @@
 package main.java.com.trabajopractico.tp3.Ejercicio2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-
-        Libro s = new Libro("1", "libro a");
-        Libro n = new Libro("2", "libro b");
-        Libro b = new Libro("3", "libro c");
-        Libro m = new Libro("4", "libro d");
-        Libro j = new Libro("5", "libro e");
 
         Socio uan = new Socio("pepito", 1);
         Socio chu = new Socio("kira", 2);
         Socio tri = new Socio("milo", 3);
 
-        uan.agregarLibro(s);
-        uan.agregarLibro(n);
+        Libro l1 = new Libro("1", "fsofgray");
+        Libro l2 = new Libro("2", "el principito");
+        Libro l3 = new Libro("3", "atdmv");
+        Libro l4 = new Libro("4", "ranita");
+        Libro l5 = new Libro("5", "nose");
 
-        chu.agregarLibro(b);
-        chu.agregarLibro(m);
+        uan.agregarLibro(l1);
+        uan.agregarLibro(l2);
 
-        tri.agregarLibro(j);
+        chu.agregarLibro(l3);
+        chu.agregarLibro(l4);
+
+        tri.agregarLibro(l5);
     }
 }
 
+import java.util.ArrayList; 
+import java.util.List;
+
 class Socio {
-    String nombre;
-    int id;
-
-    Libro libro1;
-    Libro libro2;
-    Libro libro3;
-    Libro libro4;
-    Libro libro5;
-
-    int contador = 0;
+    private String nombre;
+    private int id;
+    private List<Libro> libros;
 
     public Socio(String nombre, int id) {
         this.nombre = nombre;
         this.id = id;
+        this.libros = new ArrayList<>();
     }
 
-    public void agregarLibro(Libro libro) {
-        if (contador == 0) {
-            libro1 = libro;
-        } else if (contador == 1) {
-            libro2 = libro;
-        } else if (contador == 2) {
-            libro3 = libro;
-        } else if (contador == 3) {
-            libro4 = libro;
-        } else if (contador == 4) {
-            libro5 = libro;
-        }
-        contador++;
+    public void agregarLibro(Libro l) {
+        libros.add(l);
     }
 }
 
 class Libro {
-    String id;
-    String nombre;
+    private String id;
+    private String nombre;
 
     public Libro(String id, String nombre) {
         this.id = id;
