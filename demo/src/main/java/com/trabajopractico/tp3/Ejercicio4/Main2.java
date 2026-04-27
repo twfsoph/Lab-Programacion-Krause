@@ -7,26 +7,46 @@ public class Main2 {
         Vendedor chu = new Vendedor("brune");
         Vendedor tri = new Vendedor("nache");
 
-        uan.vehiculos[0] = "aute1";
-        uan.vehiculos[1] = "aute2";
-        chu.vehiculos[2] = "aute3";
-        chu.vehiculos[3] = "aute4";
+        Vehiculo v1 = new Vehiculo("aute1");
+        Vehiculo v2 = new Vehiculo("aute2");
+        Vehiculo v3 = new Vehiculo("aute3");
+        Vehiculo v4 = new Vehiculo("aute4");
+        Vehiculo v5 = new Vehiculo("aute5");
+        Vehiculo v6 = new Vehiculo("aute6");
+        Vehiculo v7 = new Vehiculo("aute7");
+        Vehiculo v8 = new Vehiculo("aute8");
+        Vehiculo v9 = new Vehiculo("aute9");
+        Vehiculo v10 = new Vehiculo("aute10");
 
-        tri.vehiculos[0] = "aute5";
-        tri.vehiculos[1] = "aute6";
-        tri.vehiculos[2] = "aute7";
+        uan.vehiculo1 = v1;
+        uan.vehiculo2 = v2;
 
-        tri.vehiculos[0] = "aute8";
-        tri.vehiculos[1] = "aute9";
-        tri.vehiculos[2] = "aute10";
+        chu.vehiculo1 = v3;
+        chu.vehiculo2 = v4;
+
+        tri.vehiculo1 = v5;
+        tri.vehiculo2 = v6;
+        tri.vehiculo3 = v7;
     }
 }
 
 class Vendedor {
     String nombre;
-    String[] vehiculos = new String[4];
+
+    Vehiculo vehiculo1;
+    Vehiculo vehiculo2;
+    Vehiculo vehiculo3;
+    Vehiculo vehiculo4;
 
     public Vendedor(String nombre) {
+        this.nombre = nombre;
+    }
+}
+
+class Vehiculo {
+    String nombre;
+
+    public Vehiculo(String nombre) {
         this.nombre = nombre;
     }
 }
