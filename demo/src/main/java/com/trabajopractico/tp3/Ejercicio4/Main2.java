@@ -22,6 +22,17 @@ public class Main2 {
         uan.mostrarVehiculosVendedor();
         uan.borrarVehiculo(v3);
         uan.mostrarVehiculosVendedor();
+         uan.agregarVehiculo(v2);
+         uan.agregarVehiculo(v1);
+
+         chu.agregarVehiculo(v4);
+         chu.agregarVehiculo(v5);
+         chu.agregarVehiculo(v6);
+
+         tri.agregarVehiculo(v7);
+         tri.agregarVehiculo(v8);
+         tri.agregarVehiculo(v9);
+         chu.agregarVehiculo(v10);
     }
 }
 
@@ -53,9 +64,6 @@ class Vendedor {
         return "Nombre Vendedor: " + nombre + "Vehiculo : " + vehiculos ;
     }
     
-
-
-
     
 }
 
