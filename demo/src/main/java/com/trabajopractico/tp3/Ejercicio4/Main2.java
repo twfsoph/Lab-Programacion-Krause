@@ -18,35 +18,56 @@ public class Main2 {
         Vehiculo v9 = new Vehiculo("aute9");
         Vehiculo v10 = new Vehiculo("aute10");
 
-        uan.vehiculo1 = v1;
-        uan.vehiculo2 = v2;
-
-        chu.vehiculo1 = v3;
-        chu.vehiculo2 = v4;
-
-        tri.vehiculo1 = v5;
-        tri.vehiculo2 = v6;
-        tri.vehiculo3 = v7;
+        uan.agregarVehiculo(v3);
+        uan.mostrarVehiculosVendedor();
+        uan.borrarVehiculo(v3);
+        uan.mostrarVehiculosVendedor();
     }
 }
 
-class Vendedor {
-    String nombre;
 
-    Vehiculo vehiculo1;
-    Vehiculo vehiculo2;
-    Vehiculo vehiculo3;
-    Vehiculo vehiculo4;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Vendedor {
+    private String nombre;
+    private List<Vehiculo> vehiculos;
 
     public Vendedor(String nombre) {
         this.nombre = nombre;
+        this.vehiculos = new ArrayList<>;
+        
     }
+
+    public void agregarVehiculo(Vehiculo v){
+        vehiculos.add(v);
+    }
+    public void borrarVehiculo(Vehiculo v){
+        vehiculos.delete(v);
+    }
+    public void mostrarVehiculosVendedor()
+    {
+        
+        return "Nombre Vendedor: " + nombre + "Vehiculo : " + vehiculos ;
+    }
+    
+
+
+
+    
 }
 
-class Vehiculo {
-    String nombre;
 
-    public Vehiculo(String nombre) {
+class Vehiculo {
+    private String nombre;
+    private String Marca;
+    private String Patente;
+
+    public Vehiculo(String nombre,String Marca, String Patente) {
         this.nombre = nombre;
+        this.marca = marca;
+        this.patente
     }
 }
